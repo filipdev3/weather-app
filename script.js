@@ -1,6 +1,4 @@
-// in practice api key shoul be protected and kept outside of the code that you put on github, 
-// but this is simple app without private informations and because of that i left it here
-const apiKey = '6dce7420d90ac639ecf23c47cf6ce117';
+const apiKey = 'YOUR_API_KEY_HERE';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const button = document.querySelector('button');
 
