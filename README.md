@@ -34,5 +34,5 @@ This project uses OpenWeatherMap API. Ensure you have a valid API key.
 
 - The API key is stored in script.js:
     - const apiKey = 'YOUR_API_KEY_HERE';
-    - 
+    
 - Replace **'YOUR_API_KEY_HERE'** with your own API key from https://openweathermap.org/
