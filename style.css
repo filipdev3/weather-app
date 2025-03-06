@@ -61,7 +61,7 @@ body {
 }
 
 .details {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
@@ -90,4 +90,17 @@ body {
     margin-bottom: 0;
     color: #616161;
     text-transform: uppercase;
+}
+
+.error {
+    color: #fff;
+    margin-top: 0;
+    padding: 0;
+    display: none;
+}
+
+.error p {
+    margin-top: 0;
+    font-size: 12px;
+    text-align: center;
 }

@@ -1,3 +1,5 @@
+// in practice api key shoul be protected and kept outside of the code that you put on github, 
+// but this is simple app without private informations and because of that i left it here
 const apiKey = '6dce7420d90ac639ecf23c47cf6ce117';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const button = document.querySelector('button');
@@ -7,6 +9,13 @@ async function checkWeather() {
     let inputValue = document.querySelector('input').value; // take input value
 
     let response = await fetch(apiUrl + inputValue + '&units=metric' + '&appid=' + apiKey); //fethc data from API
+
+    // if user enters city name that does not exist dispay error message
+    if(response.status == 404) {
+        document.querySelector('.error').style.display = 'block'; 
+        document.querySelector('.weather').style.display = 'none';
+    }
+
     let data = await response.json(); // convert response to JS object
 
     // putting data in elements on the page
@@ -40,8 +49,9 @@ async function checkWeather() {
 
     }
 
-    document.querySelector('.weather').style.display = 'block'; // weather div is hidden until user enter city name
-    Array.from(document.querySelectorAll('.details')).forEach(detail => detail.style.display = 'flex'); // details divs are hidden until user enter city name
+    // weather div is hidden until user enter city name
+    document.querySelector('.weather').style.display = 'block'; 
+    
 }
 
 button.addEventListener('click', checkWeather);
