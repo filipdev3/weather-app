@@ -13,7 +13,7 @@ This is a simple Weather Web App that fetches real-time weather data based on us
 
 - **HTML**: Structure of the web app.
 - **CSS**: Styling and layout.
-- **JavaScript**: Styling and layout.
+- **JavaScript**: Fetching and displaying weather data.
 - **OpenWeatherMap API**: Fetching real-time weather data.
 
 
